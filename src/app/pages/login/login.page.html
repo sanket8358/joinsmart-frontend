@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="tertiary" class="center">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center margintop">
+    <app-logo></app-logo>
+    <h1>Sign In</h1>
+  </div>
+
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input autocomplete="off" type="text" name="email" [(ngModel)]="postData.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input autocomplete="off" type="password" name="password" [(ngModel)]="postData.password"></ion-input>
+      </ion-item>
+
+      <ion-button class="margintop" color="tertiary" expand="block" shape="round" (click)="loginAction()">Sign In</ion-button>
+      <ion-button class="margintop" color="tertiary" expand="block" shape="round" fill="outline" (click)="linkedInLogin()">
+          <ion-icon name="logo-linkedin" float-left></ion-icon>Linkedin
+      </ion-button>
+      <ion-item class="margintop" lines="none">
+        <p>Don't have an account?</p> <a class="marginleft5p" routerLink="/signup"> Create Account</a>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
